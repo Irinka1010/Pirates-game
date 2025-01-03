@@ -1,0 +1,560 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <title>Політика використання файлів cookie</title>
+        <meta property="og:title" content="Політика використання файлів cookie" />
+        <meta property="og:image" content="{page-images-1}"/>
+        
+        <meta property="og:description" content="Політика використання файлів cookie">
+        <meta name="description" content="Політика використання файлів cookie"> 
+        
+
+        <link rel="shortcut icon" href="imagesDIR/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css?1730040960">   
+       <style>       
+        .fa-angle-double-down:before{content:'103'}
+.fa-blackberry:before{content:'37b'}
+.fa-twitter:before{content:'099'}
+.pagination a:hover,.pagination .active a{background-color:#c7eefe;}
+.si a, .sg a {
+    color: #FFFFFF;
+    display: block;
+    font-family:  ProximaNova-Reg, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 170px;
+}
+.fa-hacker-news:before{content:'1d4'}
+.prop-alert {border:1px solid #ccc;border-left:5px solid #2E86C1;background:#f9f9f9;padding:10px;border-radius:5px;margin-bottom:20px;}
+.fa-window-restore:before{content:'2d2'}
+.icon-jsonminifer{background-position: -187px -188px;}
+#output pre.sql {
+	height: 100%;
+	width: 100%;
+}
+
+        </style>
+                
+        </head>
+     <style>
+
+    .privacyPopup {
+        width: calc(100% - 60px);
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 25px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        max-width: 267px;
+        border-radius: 12px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 15px;
+    }
+
+    .privacyPopup h1 {
+        font-size: 20px;
+    }
+
+    .privacyPopup span {
+        margin: 0;
+        font-size: 16px;
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        margin: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        background: #212121 !important;
+        color: #fff;
+        border-radius: 2px 25px 25px 2px;
+    }
+
+    .customizeButton {
+        color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .customizeButton svg {
+        width: 20px;
+        height: 15px;
+    }
+
+    .agreeButton {
+        color: white;
+    }
+
+    .optionsPanel {
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: fixed;
+        bottom: 150px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        width: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        border-radius: 10px;
+        max-width: 300px;
+        width: calc(100% - 60px);
+        margin: 0 15px;
+    }
+
+    .optionsPanel .centerText {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .optionsPanel label {
+        margin: 10px 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] {
+        display: none;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle:before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border-radius: 50%;
+        left: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle {
+        background-color: #212121;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle:before {
+        left: 20px;
+    }
+
+    .submitButton {
+        color: white;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .centerText {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .alignCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 420px) {
+        .privacyPopup {
+            max-height: 40vh;
+            overflow: auto;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .privacyPopup h1 {
+            font-size: 18px;
+        }
+
+        .privacyPopup span, .optionsPanel label, .button, .customizeButton {
+            font-size: 13px;
+        }
+
+        .button, .customizeButton svg {
+            padding: 8px 20px;
+            margin: 5px;
+        }
+
+        .optionsPanel {
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="privacyPopup hidden">
+    <h1>Чи можемо ми використовувати файли cookie?</h1>
+
+    <span>Ми використовуємо <a target="_blank" href="cookies.html" style="color: #571a9b;">файли cookie</a>, щоб з'ясувати, з чим у вас виникли проблеми з навігацією по нашому сайту, і вирішити ці проблеми для ваших майбутніх відвідувань.</span>
+
+    <div>
+
+        <button class="agreeButton button">Так</button>
+        <button class="declineButton button">Ні</button>
+
+        <div class="customizeButton">
+            Налаштувати
+
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <title></title> <g id="Complete"> <g id="arrow-right"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
+        </div>
+    </div>
+</div>
+<div class="optionsPanel hidden">
+    <div class="centerText">Налаштування файлів cookie</div>
+
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="analytics">
+        Аналітика
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="preferences">
+        Налаштування
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="marketing">
+        Маркетингу
+
+        <span class="toggle"></span>
+    </label>
+
+    <div class="alignCenter">
+        <button class="submitButton button">Рятувати</button>
+    </div>
+</div>
+
+<script>
+    const setCookie = (name, value, days) => {
+        if (days) {
+            const expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
+            document.cookie = `${name}=${value || ""}${expires}; path=/`;
+        }
+    }
+
+    const getCookie = name => {
+        const nameEQ = name + "=";
+        return document.cookie.split(';').map(c => c.trim()).find(cookie => cookie.startsWith(nameEQ))?.substring(nameEQ.length) || null;
+    }
+
+    const popup = document.querySelector('.privacyPopup');
+    const panel = document.querySelector('.optionsPanel');
+    const togglePanel = () => panel.classList.toggle('hidden');
+    const consentCheckboxes = document.querySelectorAll('.consentCheckbox');
+    const customize = document.querySelector('.customizeButton');
+    const agree = document.querySelector('.agreeButton');
+    const submit = document.querySelector('.submitButton');
+    const decline = document.querySelector('.declineButton');
+
+    customize.addEventListener('click', togglePanel);
+    submit.addEventListener('click', () => {
+        togglePanel();
+    });
+    agree.addEventListener('click', () => {
+        const consent = [...consentCheckboxes].filter(cb => cb.checked).map(cb => cb.name);
+        setCookie("cookieVal_3999", JSON.stringify(consent), 365);
+
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+    decline.addEventListener('click', () => {
+        setCookie("cookieVal_3999", JSON.stringify([]), 365);
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+
+    const cookieCheckboxes = document.querySelectorAll('.consentCheckbox')
+
+    function saveCheckboxState() {
+        const checkboxesState = {};
+        cookieCheckboxes.forEach((input) => {
+            checkboxesState[input.name] = input.checked;
+        });
+        localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState));
+    }
+
+    cookieCheckboxes.forEach((input) => {
+        input.addEventListener('change', e => {
+            saveCheckboxState();
+        });
+    });
+
+    function loadCheckboxState() {
+        const checkboxesState = JSON.parse(localStorage.getItem('checkboxesState'));
+        if (checkboxesState) {
+            cookieCheckboxes.forEach((input) => {
+                input.checked = checkboxesState[input.name] || false;
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCheckboxState);
+
+    const consent = getCookie("cookieVal_3999");
+    if (!consent) popup.classList.remove('hidden');
+</script>
+     
+ <header class="bg-dark">
+    <div class="overlay"></div>
+    <div class="align-containers top-navLKI">
+      <a href="./" class="top-logo">
+        <img src="imagesDIR/logo.png " alt="" />
+        <span> Pirate Fitness Bootcamp</span>
+     </a>
+     <button class="hamburger-menu">
+        <span></span>
+     </button>
+     <nav class="top-menu">
+        <div class="top-menu_header">
+            <a href="./" class="top-logo">
+                <img src="imagesDIR/logo.png " alt="" />               
+            </a>
+            <button class="top-menu_butonClose">
+                <svg  version="1.1" id="Capa_1"   
+                    width="800px" height="800px" viewBox="0 0 170.879 170.879"
+                    xml:space="preserve">
+                <g>
+                    <path d="M143.8,136.363l4.277-4.277c0.011-0.011,0.011-0.022,0.026-0.033l7.092-7.098c2.105-2.099,2.105-5.5,0-7.6
+                        c-2.101-2.1-5.495-2.1-7.601,0l-3.324,3.322l-35.154-35.155l11.092-11.09c0.173-0.17,0.342-0.359,0.487-0.56l49.093-64.935
+                        c1.617-2.134,1.418-5.131-0.477-7.034c-1.896-1.903-4.887-2.118-7.029-0.518l-65.25,48.778c-0.205,0.149-0.399,0.323-0.584,0.504
+                        l-11.091,11.09l-11.09-11.09c-0.17-0.17-0.359-0.339-0.559-0.488L8.773,1.086C6.645-0.526,3.642-0.326,1.74,1.566
+                        c-1.903,1.892-2.124,4.884-0.517,7.028L50,73.848c0.15,0.205,0.321,0.405,0.505,0.58l11.094,11.089l-35.161,35.161l-3.325-3.329
+                        c-2.102-2.099-5.501-2.099-7.601,0c-2.103,2.101-2.103,5.503,0,7.604l7.126,7.127l4.273,4.273L1.577,161.701
+                        c-2.103,2.101-2.103,5.503,0,7.602c1.049,1.051,2.424,1.576,3.8,1.576c1.376,0,2.754-0.525,3.801-1.576l25.344-25.344l4.276,4.277
+                        l7.126,7.124c1.05,1.046,2.425,1.575,3.8,1.575c1.375,0,2.754-0.529,3.801-1.575c2.102-2.104,2.102-5.506,0-7.602l-3.328-3.322
+                        l35.161-35.156l35.161,35.156l-3.324,3.322c-2.104,2.101-2.104,5.497,0,7.602c1.045,1.046,2.421,1.575,3.802,1.575
+                        c1.374,0,2.751-0.529,3.795-1.575l7.112-7.113c0.006-0.005,0.011-0.005,0.016-0.011l4.279-4.271l25.344,25.338
+                        c1.045,1.051,2.421,1.576,3.8,1.576c1.376,0,2.752-0.525,3.797-1.576c2.104-2.099,2.104-5.501,0-7.602L143.8,136.363z"/>
+                </g>
+                </svg>
+            </button>
+        </div>
+        <div class="top-menu_maine">
+            <ul class="top-menu_list">
+                <li>
+                    <a class="top-menu_link"  href="./">
+                        Дім                 
+                    </a>                            
+                </li>
+                <li>
+                    <a class="top-menu_link" href="aboutus.html">
+                    Про нас                                 
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="category.html"> 
+                        Досліджуйте ігри                            
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="contact.html">
+                        Напишіть нам                                 
+                    </a>
+                </li>
+            </ul>
+             
+            <div class="top-menu_contact">
+                <h3 class="top-menu_title">Напишіть нам</h3>
+                <ul class="top-menu_list-contact">
+                    <li>
+                        <a class="contact-link" href="mailto:operations.@mail.ua">operations.@mail.ua</a>
+                    </li>
+                    <li>
+                        <a class="contact-link"  href="tel:+380 44 499 8775">+380 44 499 8775</a>
+                    </li>
+                    <li>
+                        <p class="contact-link">ТОВ «ПАКО ТОРГ», Код ЕГРПОУ 32847052 вулиця Велика Перспективна, 39/63, Кропивницький, Кіровоградська область, Україна, 25000</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+     </nav>
+    </div>
+ </header>
+
+<section class="top-section bg-dark bgImgHJ">
+    <div class="align-containers">
+        <div class="top-section_box">
+               <h2 class="top-section-title">Політика використання файлів cookie</h2> 
+               <ul class="top-section_list">
+                <li>
+                    <a   href="./">
+                        Дім
+                        <span class="box-icon">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-double-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg>
+                        </span>                 
+                    </a>
+                </li>
+                <li>
+                    <span class="top-section-element">
+                        
+                        Політика використання файлів cookie
+                    </span>
+                </li>
+               </ul>       
+        </div>
+     </div>
+</section>
+<section class="section-pad bg-lite">
+    <div class="align-containers">        
+             
+        <div class="privacyKL"><h3>Що таке файли cookie?</h3>
+
+<p>Ця Політика щодо файлів cookie пояснює, що таке файли cookie та як ми їх використовуємо, типи файлів cookie, які ми використовуємо, тобто інформацію, яку ми збираємо за допомогою файлів cookie, і як ця інформація використовується, а також як керувати налаштуваннями файлів cookie.</p>
+
+<p>Файли cookie - це невеликі текстові файли, які використовуються для зберігання невеликих фрагментів інформації. Вони зберігаються на вашому пристрої, коли веб-сайт завантажується у вашому браузері. Ці файли cookie допомагають нам зробити веб-сайт функціональним належним чином, зробити його більш безпечним, забезпечити кращий користувальницький досвід і зрозуміти, як працює веб-сайт, а також проаналізувати, що працює, а де він потребує вдосконалення.</p>
+
+<h3>Як ми використовуємо файли cookie?</h3>
+
+<p>Як і більшість онлайн-сервісів, наш веб-сайт використовує основні та сторонні файли cookie для кількох цілей. Основні файли cookie в основному необхідні для правильного функціонування веб-сайту, і вони не збирають жодних ваших особистих даних.</p>
+
+<p>Сторонні файли cookie, які використовуються на нашому веб-сайті, в основному призначені для розуміння того, як працює веб-сайт, як ви взаємодієте з нашим веб-сайтом, забезпечення безпеки наших послуг, надання реклами, яка стосується вас, і загалом надання вам кращого та покращеного користувацького досвіду та допомоги у прискоренні вашої майбутньої взаємодії з нашим веб-сайтом.</p>
+
+<p>На додаток до цього, різні браузери надають різні методи блокування та видалення файлів cookie, які використовуються веб-сайтами. Ви можете змінити налаштування свого браузера, щоб заблокувати/видалити файли cookie. Нижче наведено посилання на допоміжні документи про те, як керувати та видаляти файли cookie з основних веб-браузерів.</p>
+
+<p>Хром: <a href="https://support.google.com/accounts/answer/32050" target="_blank">https://support.google.com/accounts/answer/32050</a></p>
+
+<p>Safari: <a href="https://support.apple.com/guide/safari/sfri11471/mac" target="_blank">https://support.apple.com/guide/safari/sfri11471/mac</a></p>
+
+<p>Firefox: <a href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox" target="_blank">https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox</a></p>
+
+<p>Internet Explorer: <a href="https://support.microsoft.com/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc" target="_blank">https://support.microsoft.com/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc</a></p>
+
+<p>Якщо ви використовуєте будь-який інший веб-браузер, відвідайте офіційні документи підтримки вашого браузера.</p></div>
+    </div>
+</section>
+
+
+ <footer class="bg-dark">
+    <div class="top-footerKL 3R14S1PZ">
+        <div class="align-containers">
+            <div class="flex-wrapper row-reverse gap30">
+                <div class="flex1">
+                    <a href="./" class="top-logo">
+                        <img src="imagesDIR/logo.png " alt="" />
+                        <span> Pirate Fitness Bootcamp</span>
+                    </a>
+                    <div class="flex-wrapper footer-box_flex">
+                         <p>Почніть вигравати вже сьогодні</p>
+                             
+                            <div class="top-footerKL_img">
+                                <img src="imagesDIR/img-18.svg" alt=""> 
+                            </div> 
+                         
+                    </div>                 
+
+                </div>
+                 <div class="flex2">
+                    <div class="footer-disclaimer">
+                            <h2>Застереження</h2>
+                            <p>Вивчіть різноманіття онлайн ігор на нашому сайті, доступних виключно для повнолітніх користувачів старше 18 років. Наша платформа пропонує все: від головоломок до екшенів, однак слід пам'ятати, що успіх у цих іграх не дорівнює виграшу в реальних азартних іграх. Насолоджуйтесь безпечною та веселою грою. </p>
+                    </div>
+                 </div>
+                  <div class="flex1">
+                    <ul class="top-menu_list">
+                        <li>
+                          <a class="top-menu_link" href="communityrules.html">Правила взаємодії</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="privacy.html"> Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="term.html"> Правила та умови</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="disclaimer.html">Застереження</a>
+                        </li>
+                        
+                        <li>
+                            <a class="top-menu_link" href="responsible-gaming.html">Відповідальна соціальна гра</a>
+                        </li>
+                          
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footerKL ">
+         <div class="align-containers">
+            <div class="bottom-footerKL_copyright">	
+                <span>Copyright</span>
+                <span>&#169;</span>
+                <span>2024</span>
+                <span>Pirate Fitness Bootcamp</span>                 
+            </div>
+         </div>
+    </div>
+ </footer>
+
+<script>
+const toggleNavBtn = document.querySelector('.hamburger-menu');
+const navigationMenu = document.querySelector('.top-navLKI');
+const pageOverlay = document.querySelector('.overlay');
+const mobileNavMenu = document.querySelector('.top-menu');
+const closeMobileMenuBtn = document.querySelector('.top-menu_butonClose');
+
+toggleNavBtn.addEventListener('click', () => {
+    navigationMenu.classList.toggle('active');   
+    pageOverlay.classList.toggle('active');
+});
+
+pageOverlay.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+closeMobileMenuBtn.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+</script>
+
+
+</body>
+</html>

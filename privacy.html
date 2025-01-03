@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <title>Політика конфіденційності</title>
+        <meta property="og:title" content="Політика конфіденційності" />
+        <meta property="og:image" content="{page-images-1}"/>
+        
+        <meta property="og:description" content="Політика конфіденційності">
+        <meta name="description" content="Політика конфіденційності"> 
+        
+
+        <link rel="shortcut icon" href="imagesDIR/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css?1730040960">   
+       <style>       
+        .fa-angle-double-down:before{content:'103'}
+.fa-blackberry:before{content:'37b'}
+.fa-twitter:before{content:'099'}
+.pagination a:hover,.pagination .active a{background-color:#c7eefe;}
+.si a, .sg a {
+    color: #FFFFFF;
+    display: block;
+    font-family:  ProximaNova-Reg, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 170px;
+}
+.fa-hacker-news:before{content:'1d4'}
+.prop-alert {border:1px solid #ccc;border-left:5px solid #2E86C1;background:#f9f9f9;padding:10px;border-radius:5px;margin-bottom:20px;}
+.fa-window-restore:before{content:'2d2'}
+.icon-jsonminifer{background-position: -187px -188px;}
+#output pre.sql {
+	height: 100%;
+	width: 100%;
+}
+
+        </style>
+                
+        </head>
+     <style>
+
+    .privacyPopup {
+        width: calc(100% - 60px);
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 25px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        max-width: 267px;
+        border-radius: 12px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 15px;
+    }
+
+    .privacyPopup h1 {
+        font-size: 20px;
+    }
+
+    .privacyPopup span {
+        margin: 0;
+        font-size: 16px;
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        margin: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        background: #212121 !important;
+        color: #fff;
+        border-radius: 2px 25px 25px 2px;
+    }
+
+    .customizeButton {
+        color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .customizeButton svg {
+        width: 20px;
+        height: 15px;
+    }
+
+    .agreeButton {
+        color: white;
+    }
+
+    .optionsPanel {
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: fixed;
+        bottom: 150px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        width: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        border-radius: 10px;
+        max-width: 300px;
+        width: calc(100% - 60px);
+        margin: 0 15px;
+    }
+
+    .optionsPanel .centerText {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .optionsPanel label {
+        margin: 10px 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] {
+        display: none;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle:before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border-radius: 50%;
+        left: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle {
+        background-color: #212121;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle:before {
+        left: 20px;
+    }
+
+    .submitButton {
+        color: white;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .centerText {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .alignCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 420px) {
+        .privacyPopup {
+            max-height: 40vh;
+            overflow: auto;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .privacyPopup h1 {
+            font-size: 18px;
+        }
+
+        .privacyPopup span, .optionsPanel label, .button, .customizeButton {
+            font-size: 13px;
+        }
+
+        .button, .customizeButton svg {
+            padding: 8px 20px;
+            margin: 5px;
+        }
+
+        .optionsPanel {
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="privacyPopup hidden">
+    <h1>Чи можемо ми використовувати файли cookie?</h1>
+
+    <span>Ми використовуємо <a target="_blank" href="cookies.html" style="color: #571a9b;">файли cookie</a>, щоб з'ясувати, з чим у вас виникли проблеми з навігацією по нашому сайту, і вирішити ці проблеми для ваших майбутніх відвідувань.</span>
+
+    <div>
+
+        <button class="agreeButton button">Так</button>
+        <button class="declineButton button">Ні</button>
+
+        <div class="customizeButton">
+            Налаштувати
+
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <title></title> <g id="Complete"> <g id="arrow-right"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
+        </div>
+    </div>
+</div>
+<div class="optionsPanel hidden">
+    <div class="centerText">Налаштування файлів cookie</div>
+
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="analytics">
+        Аналітика
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="preferences">
+        Налаштування
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="marketing">
+        Маркетингу
+
+        <span class="toggle"></span>
+    </label>
+
+    <div class="alignCenter">
+        <button class="submitButton button">Рятувати</button>
+    </div>
+</div>
+
+<script>
+    const setCookie = (name, value, days) => {
+        if (days) {
+            const expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
+            document.cookie = `${name}=${value || ""}${expires}; path=/`;
+        }
+    }
+
+    const getCookie = name => {
+        const nameEQ = name + "=";
+        return document.cookie.split(';').map(c => c.trim()).find(cookie => cookie.startsWith(nameEQ))?.substring(nameEQ.length) || null;
+    }
+
+    const popup = document.querySelector('.privacyPopup');
+    const panel = document.querySelector('.optionsPanel');
+    const togglePanel = () => panel.classList.toggle('hidden');
+    const consentCheckboxes = document.querySelectorAll('.consentCheckbox');
+    const customize = document.querySelector('.customizeButton');
+    const agree = document.querySelector('.agreeButton');
+    const submit = document.querySelector('.submitButton');
+    const decline = document.querySelector('.declineButton');
+
+    customize.addEventListener('click', togglePanel);
+    submit.addEventListener('click', () => {
+        togglePanel();
+    });
+    agree.addEventListener('click', () => {
+        const consent = [...consentCheckboxes].filter(cb => cb.checked).map(cb => cb.name);
+        setCookie("cookieVal_3999", JSON.stringify(consent), 365);
+
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+    decline.addEventListener('click', () => {
+        setCookie("cookieVal_3999", JSON.stringify([]), 365);
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+
+    const cookieCheckboxes = document.querySelectorAll('.consentCheckbox')
+
+    function saveCheckboxState() {
+        const checkboxesState = {};
+        cookieCheckboxes.forEach((input) => {
+            checkboxesState[input.name] = input.checked;
+        });
+        localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState));
+    }
+
+    cookieCheckboxes.forEach((input) => {
+        input.addEventListener('change', e => {
+            saveCheckboxState();
+        });
+    });
+
+    function loadCheckboxState() {
+        const checkboxesState = JSON.parse(localStorage.getItem('checkboxesState'));
+        if (checkboxesState) {
+            cookieCheckboxes.forEach((input) => {
+                input.checked = checkboxesState[input.name] || false;
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCheckboxState);
+
+    const consent = getCookie("cookieVal_3999");
+    if (!consent) popup.classList.remove('hidden');
+</script>
+     
+ <header class="bg-dark">
+    <div class="overlay"></div>
+    <div class="align-containers top-navLKI">
+      <a href="./" class="top-logo">
+        <img src="imagesDIR/logo.png " alt="" />
+        <span> Pirate Fitness Bootcamp</span>
+     </a>
+     <button class="hamburger-menu">
+        <span></span>
+     </button>
+     <nav class="top-menu">
+        <div class="top-menu_header">
+            <a href="./" class="top-logo">
+                <img src="imagesDIR/logo.png " alt="" />               
+            </a>
+            <button class="top-menu_butonClose">
+                <svg  version="1.1" id="Capa_1"   
+                    width="800px" height="800px" viewBox="0 0 170.879 170.879"
+                    xml:space="preserve">
+                <g>
+                    <path d="M143.8,136.363l4.277-4.277c0.011-0.011,0.011-0.022,0.026-0.033l7.092-7.098c2.105-2.099,2.105-5.5,0-7.6
+                        c-2.101-2.1-5.495-2.1-7.601,0l-3.324,3.322l-35.154-35.155l11.092-11.09c0.173-0.17,0.342-0.359,0.487-0.56l49.093-64.935
+                        c1.617-2.134,1.418-5.131-0.477-7.034c-1.896-1.903-4.887-2.118-7.029-0.518l-65.25,48.778c-0.205,0.149-0.399,0.323-0.584,0.504
+                        l-11.091,11.09l-11.09-11.09c-0.17-0.17-0.359-0.339-0.559-0.488L8.773,1.086C6.645-0.526,3.642-0.326,1.74,1.566
+                        c-1.903,1.892-2.124,4.884-0.517,7.028L50,73.848c0.15,0.205,0.321,0.405,0.505,0.58l11.094,11.089l-35.161,35.161l-3.325-3.329
+                        c-2.102-2.099-5.501-2.099-7.601,0c-2.103,2.101-2.103,5.503,0,7.604l7.126,7.127l4.273,4.273L1.577,161.701
+                        c-2.103,2.101-2.103,5.503,0,7.602c1.049,1.051,2.424,1.576,3.8,1.576c1.376,0,2.754-0.525,3.801-1.576l25.344-25.344l4.276,4.277
+                        l7.126,7.124c1.05,1.046,2.425,1.575,3.8,1.575c1.375,0,2.754-0.529,3.801-1.575c2.102-2.104,2.102-5.506,0-7.602l-3.328-3.322
+                        l35.161-35.156l35.161,35.156l-3.324,3.322c-2.104,2.101-2.104,5.497,0,7.602c1.045,1.046,2.421,1.575,3.802,1.575
+                        c1.374,0,2.751-0.529,3.795-1.575l7.112-7.113c0.006-0.005,0.011-0.005,0.016-0.011l4.279-4.271l25.344,25.338
+                        c1.045,1.051,2.421,1.576,3.8,1.576c1.376,0,2.752-0.525,3.797-1.576c2.104-2.099,2.104-5.501,0-7.602L143.8,136.363z"/>
+                </g>
+                </svg>
+            </button>
+        </div>
+        <div class="top-menu_maine">
+            <ul class="top-menu_list">
+                <li>
+                    <a class="top-menu_link"  href="./">
+                        Дім                 
+                    </a>                            
+                </li>
+                <li>
+                    <a class="top-menu_link" href="aboutus.html">
+                    Про нас                                 
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="category.html"> 
+                        Досліджуйте ігри                            
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="contact.html">
+                        Напишіть нам                                 
+                    </a>
+                </li>
+            </ul>
+             
+            <div class="top-menu_contact">
+                <h3 class="top-menu_title">Напишіть нам</h3>
+                <ul class="top-menu_list-contact">
+                    <li>
+                        <a class="contact-link" href="mailto:operations.@mail.ua">operations.@mail.ua</a>
+                    </li>
+                    <li>
+                        <a class="contact-link"  href="tel:+380 44 499 8775">+380 44 499 8775</a>
+                    </li>
+                    <li>
+                        <p class="contact-link">ТОВ «ПАКО ТОРГ», Код ЕГРПОУ 32847052 вулиця Велика Перспективна, 39/63, Кропивницький, Кіровоградська область, Україна, 25000</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+     </nav>
+    </div>
+ </header>
+
+<section class="top-section bg-dark bgImgHJ">
+    <div class="align-containers">
+        <div class="top-section_box">
+               <h2 class="top-section-title">Політика конфіденційності</h2> 
+               <ul class="top-section_list">
+                <li>
+                    <a   href="./">
+                        Дім
+                        <span class="box-icon">
+                            <svg aria-hidden="true" class="e-font-icon-svg e-fas-angle-double-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34zm192-34l-136-136c-9.4-9.4-24.6-9.4-33.9 0l-22.6 22.6c-9.4 9.4-9.4 24.6 0 33.9l96.4 96.4-96.4 96.4c-9.4 9.4-9.4 24.6 0 33.9l22.6 22.6c9.4 9.4 24.6 9.4 33.9 0l136-136c9.4-9.2 9.4-24.4 0-33.8z"></path></svg>
+                        </span>                 
+                    </a>
+                </li>
+                <li>
+                    <span class="top-section-element">
+                        
+                        Політика конфіденційності
+                    </span>
+                </li>
+               </ul>       
+        </div>
+     </div>
+</section>
+<section class="section-pad bg-lite">
+    <div class="align-containers">        
+             
+        <div class="privacyKL"><p>У компанії, доступній з, одним з <span class="domaintextname-1v8fDQ"></span>наших головних пріоритетів є конфіденційність наших відвідувачів. Цей документ Політики конфіденційності містить типи інформації, яка збирається та записується <span class="domaintextname-1v8fDQ"></span> , і як ми її використовуємо.</p><p>Якщо у вас є додаткові запитання або вам потрібна додаткова інформація про нашу Політику конфіденційності, не соромтеся звертатися до нас.</p><p>Ця Політика конфіденційності застосовується лише до нашої онлайн-діяльності та дійсна для відвідувачів нашого веб-сайту щодо інформації, якою вони поділилися та / або збирають у <span class="domaintextname-1v8fDQ"></span>. Ця політика не застосовується до будь-якої інформації, зібраної в автономному режимі або через інші канали, крім цього веб-сайту.</p><h2>Згоди</h2><p>Використовуючи наш веб-сайт, ви погоджуєтесь з нашою Політикою конфіденційності та погоджуєтесь з її умовами.</p><h2>Інформація, яку ми збираємо</h2><p>Особиста інформація, яку вас просять надати, та причини, чому вас просять її надати, будуть зрозумілі вам у той момент, коли ми просимо вас надати вашу особисту інформацію.</p><p>Якщо ви зв'яжетеся з нами безпосередньо, ми можемо отримати додаткову інформацію про вас, таку як ваше ім'я, адреса електронної пошти, номер телефону, вміст повідомлення та/або вкладень, які ви можете надіслати нам, а також будь-яку іншу інформацію, яку ви можете надати.</p><p>Коли ви реєструєте обліковий запис, ми можемо запитати вашу контактну інформацію, включаючи такі елементи, як ім'я, назва компанії, адреса, адреса електронної пошти та номер телефону.</p><h2>Як ми використовуємо вашу інформацію</h2><p>Ми використовуємо зібрану інформацію різними способами, в тому числі для:</p><ul><li>Надання, експлуатація та підтримка нашого веб-сайту</li><li>Вдосконалюйте, персоналізуйте та розширюйте наш веб-сайт</li><li>Зрозумійте та проаналізуйте, як ви використовуєте наш веб-сайт</li><li>Розробка нових продуктів, служб, функцій і функціональних можливостей</li><li>Спілкуватися з вами безпосередньо або через одного з наших партнерів, у тому числі для обслуговування клієнтів, щоб надавати вам оновлення та іншу інформацію, що стосується веб-сайту, а також для маркетингових та рекламних цілей</li><li>Надсилайте вам електронні листи</li><li>Пошук і запобігання шахрайству</li></ul><h2>Лог-файли</h2><p><span class="domaintextname-1v8fDQ"></span> дотримується стандартної процедури використання файлів журналів. Ці файли реєструють відвідувачів, коли вони відвідують веб-сайти. Всі хостингові компанії роблять це і є частиною аналітики хостингових послуг. Інформація, зібрана файлами журналів, включає адреси інтернет-протоколу (IP), тип браузера, постачальника послуг Інтернету (ISP), позначку дати та часу, сторінки переходу / виходу та, можливо, кількість кліків. Вони не пов'язані з будь-якою інформацією, за якою можна ідентифікувати особу. Метою інформації є аналіз тенденцій, адміністрування сайту, відстеження руху користувачів на веб-сайті та збір демографічної інформації.</p><h2>Файли cookie та веб-маяки</h2><p>Як і будь-який інший веб-сайт, <span class="domaintextname-1v8fDQ"></span> використовує файли cookie. Ці файли cookie використовуються для зберігання інформації, включаючи уподобання відвідувачів та сторінки на веб-сайті, які відвідувач відвідував або відвідував. Інформація використовується для оптимізації роботи користувачів шляхом налаштування вмісту нашої веб-сторінки на основі типу браузера відвідувачів та / або іншої інформації.</p><h2>Посилання третіх сторін</h2><p>Наш Сайт може містити посилання на інші веб-сайти. Будь ласка, ознайомтеся з їхніми політиками конфіденційності, щоб дізнатися більше про те, як вони збирають і використовують ваші персональні дані, оскільки ми не контролюємо їх політику та практику обробки персональних даних.</p><h2>Політика конфіденційності рекламних партнерів</h2><p>Сторонні рекламні сервери або рекламні мережі використовують такі технології, як файли cookie, JavaScript або веб-маяки, які використовуються у відповідних рекламних оголошеннях та посиланнях, що з'являються на <span class="domaintextname-1v8fDQ"></span>, які надсилаються безпосередньо в браузер користувачів. Вони автоматично отримують вашу IP-адресу, коли це відбувається. Ці технології використовуються для вимірювання ефективності їх рекламних кампаній та / або для персоналізації рекламного контенту, який ви бачите на веб-сайтах, які ви відвідуєте.</p><p>Зверніть увагу, що не має доступу або контролю над цими файлами cookie, <span class="domaintextname-1v8fDQ"></span> які використовуються сторонніми рекламодавцями.</p><h2>Політика конфіденційності третіх сторін</h2><p><span class="domaintextname-1v8fDQ"></span> Політика конфіденційності не поширюється на інших рекламодавців або веб-сайти. Таким чином, ми рекомендуємо вам ознайомитися з відповідною політикою конфіденційності цих сторонніх рекламних серверів для отримання більш детальної інформації. Він може включати їх практику та інструкції про те, як відмовитися від певних варіантів.</p><p>Ви можете вимкнути файли cookie за допомогою індивідуальних параметрів браузера. Щоб дізнатися більш детальну інформацію про управління файлами cookie за допомогою конкретних веб-браузерів, її можна знайти на відповідних веб-сайтах браузерів.</p><h2>Права на конфіденційність CCPA</h2><p>Відповідно до CCPA, серед інших прав, каліфорнійські споживачі мають право:</p><p>Вимагати, щоб компанія, яка збирає персональні дані споживача, розкривала категорії та конкретні фрагменти персональних даних, які компанія зібрала про споживачів.</p><p>Попросіть компанію видалити будь-які особисті дані про споживача, які зібрала компанія.</p><p>Якщо ви зробите запит, у нас є один місяць, щоб відповісти вам. Якщо ви хочете скористатися будь-яким із цих прав, будь ласка, зв'яжіться з нами.</p><h2>Права на захист даних GDPR</h2><p>Ми хотіли б переконатися, що ви повністю обізнані про всі свої права на захист даних. Кожен користувач має право на:</p><p>Право на доступ – Ви маєте право вимагати копії своїх персональних даних. Ми можемо стягувати з вас невелику плату за цю послугу.</p><p>Право на виправлення - Ви маєте право вимагати, щоб ми виправили будь-яку інформацію, яку ви вважаєте неточною. Ви також маєте право вимагати, щоб ми доповнили інформацію, яку ви вважаєте неповною.</p><p>Право на видалення - Ви маєте право вимагати, щоб ми видалили ваші особисті дані за певних умов.</p><p>Право на обмеження обробки - Ви маєте право вимагати, щоб ми обмежили обробку ваших персональних даних за певних умов.</p><p>Право заперечувати проти обробки - Ви маєте право заперечити проти обробки нами ваших персональних даних за певних умов.</p><p>Право на переносимість даних – Ви маєте право вимагати, щоб ми передали зібрані нами дані іншій організації або безпосередньо вам за певних умов.</p><p>Якщо ви зробите запит, у нас є один місяць, щоб відповісти вам. Якщо ви хочете скористатися будь-яким із цих прав, будь ласка, зв'яжіться з нами.</p><h2>Зміни до цієї Політики конфіденційності</h2><p>Ми можемо час від часу оновлювати нашу Політику конфіденційності. Таким чином, ми радимо вам періодично переглядати цю сторінку на предмет будь-яких змін. Ми повідомимо вас про будь-які зміни, розмістивши нову Політику конфіденційності на цій сторінці. Ці зміни набувають чинності негайно, після їх публікації на цій сторінці.</p><h2>Зв'яжіться з нами</h2><p>Якщо у вас є які-небудь питання або пропозиції щодо нашої Політики конфіденційності, не соромтеся звертатися до нас.</p><ul><li>ТОВ «ПАКО ТОРГ», Код ЕГРПОУ 32847052 вулиця Велика Перспективна, 39/63, Кропивницький, Кіровоградська область, Україна, 25000</li><li>+380 44 499 8775</li><li>operations.@mail.ua</li></ul><script>for(var domainElements=document.getElementsByClassName("domaintextname-1v8fDQ"),hostname=window.location.hostname,i=0;i<domainElements.length;i++)domainElements[i].innerHTML=hostname</script></div>
+    </div>
+</section>
+
+
+ <footer class="bg-dark">
+    <div class="top-footerKL 3R14S1PZ">
+        <div class="align-containers">
+            <div class="flex-wrapper row-reverse gap30">
+                <div class="flex1">
+                    <a href="./" class="top-logo">
+                        <img src="imagesDIR/logo.png " alt="" />
+                        <span> Pirate Fitness Bootcamp</span>
+                    </a>
+                    <div class="flex-wrapper footer-box_flex">
+                         <p>Почніть вигравати вже сьогодні</p>
+                             
+                            <div class="top-footerKL_img">
+                                <img src="imagesDIR/img-18.svg" alt=""> 
+                            </div> 
+                         
+                    </div>                 
+
+                </div>
+                 <div class="flex2">
+                    <div class="footer-disclaimer">
+                            <h2>Застереження</h2>
+                            <p>Вивчіть різноманіття онлайн ігор на нашому сайті, доступних виключно для повнолітніх користувачів старше 18 років. Наша платформа пропонує все: від головоломок до екшенів, однак слід пам'ятати, що успіх у цих іграх не дорівнює виграшу в реальних азартних іграх. Насолоджуйтесь безпечною та веселою грою. </p>
+                    </div>
+                 </div>
+                  <div class="flex1">
+                    <ul class="top-menu_list">
+                        <li>
+                          <a class="top-menu_link" href="communityrules.html">Правила взаємодії</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="privacy.html"> Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="term.html"> Правила та умови</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="disclaimer.html">Застереження</a>
+                        </li>
+                        
+                        <li>
+                            <a class="top-menu_link" href="responsible-gaming.html">Відповідальна соціальна гра</a>
+                        </li>
+                          
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footerKL ">
+         <div class="align-containers">
+            <div class="bottom-footerKL_copyright">	
+                <span>Copyright</span>
+                <span>&#169;</span>
+                <span>2024</span>
+                <span>Pirate Fitness Bootcamp</span>                 
+            </div>
+         </div>
+    </div>
+ </footer>
+
+<script>
+const toggleNavBtn = document.querySelector('.hamburger-menu');
+const navigationMenu = document.querySelector('.top-navLKI');
+const pageOverlay = document.querySelector('.overlay');
+const mobileNavMenu = document.querySelector('.top-menu');
+const closeMobileMenuBtn = document.querySelector('.top-menu_butonClose');
+
+toggleNavBtn.addEventListener('click', () => {
+    navigationMenu.classList.toggle('active');   
+    pageOverlay.classList.toggle('active');
+});
+
+pageOverlay.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+closeMobileMenuBtn.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+</script>
+
+
+</body>
+</html>

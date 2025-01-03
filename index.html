@@ -1,0 +1,879 @@
+  
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+        <title>Pirate Fitness Bootcamp</title>
+        <meta property="og:title" content="Pirate Fitness Bootcamp" />
+        <meta property="og:image" content="{page-images-1}"/>
+        
+        <meta property="og:description" content="Pirate Fitness Bootcamp">
+        <meta name="description" content="Pirate Fitness Bootcamp"> 
+        
+        <link rel="shortcut icon" href="imagesDIR/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="style.css?1730040960">   
+       <style>       
+        .fa-angle-double-down:before{content:'103'}
+.fa-blackberry:before{content:'37b'}
+.fa-twitter:before{content:'099'}
+.pagination a:hover,.pagination .active a{background-color:#c7eefe;}
+.si a, .sg a {
+    color: #FFFFFF;
+    display: block;
+    font-family:  ProximaNova-Reg, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    width: 170px;
+}
+.fa-hacker-news:before{content:'1d4'}
+.prop-alert {border:1px solid #ccc;border-left:5px solid #2E86C1;background:#f9f9f9;padding:10px;border-radius:5px;margin-bottom:20px;}
+.fa-window-restore:before{content:'2d2'}
+.icon-jsonminifer{background-position: -187px -188px;}
+#output pre.sql {
+	height: 100%;
+	width: 100%;
+}
+
+        </style>
+                
+        </head>
+     <style>
+
+    .privacyPopup {
+        width: calc(100% - 60px);
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+        text-align: center;
+        position: fixed;
+        bottom: 25px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        max-width: 267px;
+        border-radius: 12px;
+        z-index: 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 0 15px;
+    }
+
+    .privacyPopup h1 {
+        font-size: 20px;
+    }
+
+    .privacyPopup span {
+        margin: 0;
+        font-size: 16px;
+        display: inline-block;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .button {
+        border: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        margin: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        background: #212121 !important;
+        color: #fff;
+        border-radius: 2px 25px 25px 2px;
+    }
+
+    .customizeButton {
+        color: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .customizeButton svg {
+        width: 20px;
+        height: 15px;
+    }
+
+    .agreeButton {
+        color: white;
+    }
+
+    .optionsPanel {
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: fixed;
+        bottom: 150px;
+        left: calc(50% - 15px);
+        transform: translateX(-50%);
+        width: auto;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        z-index: 4;
+        border-radius: 10px;
+        max-width: 300px;
+        width: calc(100% - 60px);
+        margin: 0 15px;
+    }
+
+    .optionsPanel .centerText {
+        font-size: 19px;
+        font-weight: 600;
+    }
+
+    .optionsPanel label {
+        margin: 10px 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] {
+        display: none;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle {
+        position: relative;
+        display: inline-block;
+        width: 40px;
+        height: 20px;
+        background-color: #ccc;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    .optionsPanel label input[type="checkbox"] + .toggle:before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: white;
+        border-radius: 50%;
+        left: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle {
+        background-color: #212121;
+    }
+
+    .optionsPanel label input[type="checkbox"]:checked + .toggle:before {
+        left: 20px;
+    }
+
+    .submitButton {
+        color: white;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
+    .centerText {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .alignCenter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 420px) {
+        .privacyPopup {
+            max-height: 40vh;
+            overflow: auto;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        .privacyPopup h1 {
+            font-size: 18px;
+        }
+
+        .privacyPopup span, .optionsPanel label, .button, .customizeButton {
+            font-size: 13px;
+        }
+
+        .button, .customizeButton svg {
+            padding: 8px 20px;
+            margin: 5px;
+        }
+
+        .optionsPanel {
+            padding: 15px;
+        }
+    }
+</style>
+
+<div class="privacyPopup hidden">
+    <h1>Чи можемо ми використовувати файли cookie?</h1>
+
+    <span>Ми використовуємо <a target="_blank" href="cookies.html" style="color: #571a9b;">файли cookie</a>, щоб з'ясувати, з чим у вас виникли проблеми з навігацією по нашому сайту, і вирішити ці проблеми для ваших майбутніх відвідувань.</span>
+
+    <div>
+
+        <button class="agreeButton button">Так</button>
+        <button class="declineButton button">Ні</button>
+
+        <div class="customizeButton">
+            Налаштувати
+
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><g stroke-width="0"></g><g stroke-linecap="round" stroke-linejoin="round"></g><g> <title></title> <g id="Complete"> <g id="arrow-right"> <g> <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline> <line fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" x1="2.5" x2="19.2" y1="12" y2="12"></line> </g> </g> </g> </g></svg>
+        </div>
+    </div>
+</div>
+<div class="optionsPanel hidden">
+    <div class="centerText">Налаштування файлів cookie</div>
+
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="analytics">
+        Аналітика
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="preferences">
+        Налаштування
+
+        <span class="toggle"></span>
+    </label>
+    <label>
+        <input type="checkbox" checked class="consentCheckbox" name="marketing">
+        Маркетингу
+
+        <span class="toggle"></span>
+    </label>
+
+    <div class="alignCenter">
+        <button class="submitButton button">Рятувати</button>
+    </div>
+</div>
+
+<script>
+    const setCookie = (name, value, days) => {
+        if (days) {
+            const expires = `; expires=${new Date(Date.now() + days * 864e5).toUTCString()}`;
+            document.cookie = `${name}=${value || ""}${expires}; path=/`;
+        }
+    }
+
+    const getCookie = name => {
+        const nameEQ = name + "=";
+        return document.cookie.split(';').map(c => c.trim()).find(cookie => cookie.startsWith(nameEQ))?.substring(nameEQ.length) || null;
+    }
+
+    const popup = document.querySelector('.privacyPopup');
+    const panel = document.querySelector('.optionsPanel');
+    const togglePanel = () => panel.classList.toggle('hidden');
+    const consentCheckboxes = document.querySelectorAll('.consentCheckbox');
+    const customize = document.querySelector('.customizeButton');
+    const agree = document.querySelector('.agreeButton');
+    const submit = document.querySelector('.submitButton');
+    const decline = document.querySelector('.declineButton');
+
+    customize.addEventListener('click', togglePanel);
+    submit.addEventListener('click', () => {
+        togglePanel();
+    });
+    agree.addEventListener('click', () => {
+        const consent = [...consentCheckboxes].filter(cb => cb.checked).map(cb => cb.name);
+        setCookie("cookieVal_3999", JSON.stringify(consent), 365);
+
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+    decline.addEventListener('click', () => {
+        setCookie("cookieVal_3999", JSON.stringify([]), 365);
+        panel.classList.add('hidden');
+        popup.classList.add('hidden');
+    });
+
+    const cookieCheckboxes = document.querySelectorAll('.consentCheckbox')
+
+    function saveCheckboxState() {
+        const checkboxesState = {};
+        cookieCheckboxes.forEach((input) => {
+            checkboxesState[input.name] = input.checked;
+        });
+        localStorage.setItem('checkboxesState', JSON.stringify(checkboxesState));
+    }
+
+    cookieCheckboxes.forEach((input) => {
+        input.addEventListener('change', e => {
+            saveCheckboxState();
+        });
+    });
+
+    function loadCheckboxState() {
+        const checkboxesState = JSON.parse(localStorage.getItem('checkboxesState'));
+        if (checkboxesState) {
+            cookieCheckboxes.forEach((input) => {
+                input.checked = checkboxesState[input.name] || false;
+            });
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadCheckboxState);
+
+    const consent = getCookie("cookieVal_3999");
+    if (!consent) popup.classList.remove('hidden');
+</script>
+     
+ <header class="bg-dark">
+    <div class="overlay"></div>
+    <div class="align-containers top-navLKI">
+      <a href="./" class="top-logo">
+        <img src="imagesDIR/logo.png " alt="" />
+        <span> Pirate Fitness Bootcamp</span>
+     </a>
+     <button class="hamburger-menu">
+        <span></span>
+     </button>
+     <nav class="top-menu">
+        <div class="top-menu_header">
+            <a href="./" class="top-logo">
+                <img src="imagesDIR/logo.png " alt="" />               
+            </a>
+            <button class="top-menu_butonClose">
+                <svg  version="1.1" id="Capa_1"   
+                    width="800px" height="800px" viewBox="0 0 170.879 170.879"
+                    xml:space="preserve">
+                <g>
+                    <path d="M143.8,136.363l4.277-4.277c0.011-0.011,0.011-0.022,0.026-0.033l7.092-7.098c2.105-2.099,2.105-5.5,0-7.6
+                        c-2.101-2.1-5.495-2.1-7.601,0l-3.324,3.322l-35.154-35.155l11.092-11.09c0.173-0.17,0.342-0.359,0.487-0.56l49.093-64.935
+                        c1.617-2.134,1.418-5.131-0.477-7.034c-1.896-1.903-4.887-2.118-7.029-0.518l-65.25,48.778c-0.205,0.149-0.399,0.323-0.584,0.504
+                        l-11.091,11.09l-11.09-11.09c-0.17-0.17-0.359-0.339-0.559-0.488L8.773,1.086C6.645-0.526,3.642-0.326,1.74,1.566
+                        c-1.903,1.892-2.124,4.884-0.517,7.028L50,73.848c0.15,0.205,0.321,0.405,0.505,0.58l11.094,11.089l-35.161,35.161l-3.325-3.329
+                        c-2.102-2.099-5.501-2.099-7.601,0c-2.103,2.101-2.103,5.503,0,7.604l7.126,7.127l4.273,4.273L1.577,161.701
+                        c-2.103,2.101-2.103,5.503,0,7.602c1.049,1.051,2.424,1.576,3.8,1.576c1.376,0,2.754-0.525,3.801-1.576l25.344-25.344l4.276,4.277
+                        l7.126,7.124c1.05,1.046,2.425,1.575,3.8,1.575c1.375,0,2.754-0.529,3.801-1.575c2.102-2.104,2.102-5.506,0-7.602l-3.328-3.322
+                        l35.161-35.156l35.161,35.156l-3.324,3.322c-2.104,2.101-2.104,5.497,0,7.602c1.045,1.046,2.421,1.575,3.802,1.575
+                        c1.374,0,2.751-0.529,3.795-1.575l7.112-7.113c0.006-0.005,0.011-0.005,0.016-0.011l4.279-4.271l25.344,25.338
+                        c1.045,1.051,2.421,1.576,3.8,1.576c1.376,0,2.752-0.525,3.797-1.576c2.104-2.099,2.104-5.501,0-7.602L143.8,136.363z"/>
+                </g>
+                </svg>
+            </button>
+        </div>
+        <div class="top-menu_maine">
+            <ul class="top-menu_list">
+                <li>
+                    <a class="top-menu_link"  href="./">
+                        Дім                 
+                    </a>                            
+                </li>
+                <li>
+                    <a class="top-menu_link" href="aboutus.html">
+                    Про нас                                 
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="category.html"> 
+                        Досліджуйте ігри                            
+                    </a>
+                </li>
+                <li>
+                    <a class="top-menu_link" href="contact.html">
+                        Напишіть нам                                 
+                    </a>
+                </li>
+            </ul>
+             
+            <div class="top-menu_contact">
+                <h3 class="top-menu_title">Напишіть нам</h3>
+                <ul class="top-menu_list-contact">
+                    <li>
+                        <a class="contact-link" href="mailto:operations.@mail.ua">operations.@mail.ua</a>
+                    </li>
+                    <li>
+                        <a class="contact-link"  href="tel:+380 44 499 8775">+380 44 499 8775</a>
+                    </li>
+                    <li>
+                        <p class="contact-link">ТОВ «ПАКО ТОРГ», Код ЕГРПОУ 32847052 вулиця Велика Перспективна, 39/63, Кропивницький, Кіровоградська область, Україна, 25000</p>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+     </nav>
+    </div>
+ </header>
+ 
+<section class="bg-dark">
+    <div class="skew-section">
+        <div class="align-containers">
+            <div class="flex-wrapper row-reverse gap30 relet pad-top50">
+                <div class="flex1">
+                    <div class="hero-context">
+                        <h1 class="hero-title">Pirate Fitness Bootcamp</h1>
+                        <h3 class="hero-textKL">Pirate Fitness Bootcamp закликає всіх безстрашних у пошуках скарбів і великих морських битв. Ваша пригода починається зараз.</h3>
+                    </div>                    
+                </div>
+                <div class="flex1">
+                    <div class="hero-img">
+                        <img src="imagesDIR/other/svg_ship-0.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-pad bg-lite bgImgHJ">
+     <div class="align-containers">
+        <div class="title-boxHJK">
+         <h2 class="titleHJK">Переваги ігор на нашому сайті</h2>
+        </div>        
+        <div class="flex-wrapper row-reverse gap30">
+            <div class="flex1">
+              <div class="grid-box">
+                <div class="grid-item">
+                    <div class="icon-img">
+                        <img src="imagesDIR/other/gaming-icons-0.png" alt="">
+                    </div>
+                    <div class="benefit-text">Морські битви: беріть участь в епічних морських битвах, використовуючи гармати та тактику морського бою.</div>
+                </div>
+                 <div class="grid-item">
+                    <div class="icon-img">
+                        <img src="imagesDIR/other/gaming-icons-1.png" alt="">
+                    </div>
+                    <div class="benefit-text">Секретні місії: виконуйте секретні місії від таємничих клієнтів або для свого капітана.</div>
+                </div>
+                <div class="grid-item">
+                    <div class="icon-img">
+                        <img src="imagesDIR/other/gaming-icons-2.png" alt="">
+                    </div>
+                    <div class="benefit-text">Розробка піратського коду: Створіть свій власний піратський кодекс, який визначає правила та норми поведінки на борту вашого корабля.</div>
+                </div>
+                  <div class="grid-item">
+                    <div class="icon-img">
+                        <img src="imagesDIR/other/gaming-icons-3.png" alt="">
+                    </div>
+                    <div class="benefit-text">Секретні карти та шифри: розгадайте шифри та криптограми, які ведуть до скарбів.</div>
+                </div>
+              </div>
+            </div>
+            <div class="flex1">
+                <div class="benefit-imgWrapper">
+                    <div class="services__images">
+                       <div class="services__images-item">
+                        <img src="imagesDIR/background/gallery-0.jpg" alt="">
+                       </div>
+                       <div class="services__images-item">
+                        <img src="imagesDIR/background/gallery-1.jpg" alt="">
+                       </div>
+                       <div class="services__images-item">
+                        <img src="imagesDIR/background/gallery-2.jpg" alt="">
+                       </div>
+                       <div class="services__images-item">
+                        <img src="imagesDIR/background/gallery-3.jpg" alt="">
+                       </div>
+                    </div>
+                </div>                
+            </div>  
+        </div>
+     </div>
+</section>
+<div class="col-rew">
+ <section class="bg-accent">
+   <div class="skew-sectionOp bg-dark">
+    <div class="align-containers">
+        <div class="flex-wrapper row-reverse gap30 pad-top50 align">
+            <div class="flex1">
+                <div class="flex-iner">
+                    <div class="about__funFact-images">
+                        <img src="imagesDIR/other/pirates-0.png" alt="">
+                    </div>
+                </div>               
+            </div>
+             <div class="flex1">
+                <div class="title-boxHJK l1WoKam5T">
+                   <h2 class="titleHJK">Про нас</h2>
+                </div>
+                <div class="about-context"><p>Сайт Pirate Fitness Bootcamp - ваше ідеальне місце, щоб зануритися у світ піратських пригод і океанських подорожей. Тут ви знайдете ігри, які дозволяють відправитися на пошуки скарбів і слави, проплисти бурхливими морями і зіткнутися з незвіданими випробуваннями.</p><p>У Pirate Fitness Bootcamp є колекція ігор, де ви можете керувати власним піратським флотом, досліджувати таємничі острови та вступати в битви з іншими морськими капітанами. Наш сайт пропонує ігри різних жанрів, від стратегії до пригод, де ви зможете випробувати на собі всі принади і ризики піратського життя. Тут кожен гравець, незалежно від віку, знайде для себе щось захоплююче.</p><p>Підніміть свій прапор і приготуйтеся зануритися у світ піратських пригод на Pirate Fitness Bootcamp. Керуйте своїм кораблем, підкорюйте моря і доводьте свою майстерність в морських битвах.</p></div>
+             </div>
+        </div>
+    </div>
+   </div>
+</section>
+<section class="bg-imgStep section-pad">
+    <div class="align-containers relet">
+         <div class="title-boxHJK">
+         <h2 class="titleHJK">Шлях до захоплюючих пригод: почніть грати швидко і легко</h2>
+        </div> 
+        <div class="grid-step">
+            <div class="grid-step_item relet">
+                <div class="tf-box-icon">
+                    <img src="imagesDIR/other/fruit-pirates-0.svg" alt="">
+                </div>
+                <h2>1</h2>
+                <p>Ознайомтеся з нашим каталогом: перегляньте наш великий каталог ігор і виберіть ту, яка вам до душі. Для зручності використовуйте фільтри за жанрами та популярністю.</p>
+                <div class="arrow">
+                    <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_625_20131)"><path d="M13.0682 58.6163C14.3723 57.8473 15.7186 57.1206 17.0509 56.436L16.1333 54.65C14.7448 55.3625 13.3845 56.1032 12.0524 56.9002L13.0683 58.6444L13.0682 58.6163ZM21.1465 54.4527C22.5352 53.8244 23.9381 53.2383 25.3551 52.6944L24.6057 50.8245C23.1607 51.3965 21.7298 51.9825 20.313 52.6107L21.1324 54.4386L21.1465 54.4527ZM29.6344 51.1469C31.0797 50.6592 32.5251 50.2277 33.9986 49.8244L33.4458 47.8989C31.9582 48.3162 30.4707 48.7616 28.9974 49.2493L29.6344 51.1469ZM38.4195 48.6986C39.9073 48.3656 41.3952 48.0606 42.8972 47.7977L42.5408 45.8166C41.0107 46.0793 39.4948 46.3842 37.9649 46.7312L38.4195 48.6986ZM47.4036 47.1216C48.9199 46.929 50.4222 46.7786 51.9527 46.6563L51.7788 44.6615C50.2202 44.7838 48.6898 44.9342 47.1455 45.1267L47.4036 47.1216ZM56.5024 46.4156C58.019 46.3635 59.5498 46.3536 61.0666 46.3857L61.0753 44.3774C59.5164 44.3592 57.9715 44.3551 56.4128 44.4211L56.4884 46.4297L56.5024 46.4156ZM65.6314 46.5524C67.1485 46.6407 68.6656 46.7852 70.1829 46.9578L70.4022 44.9641C68.8569 44.7915 67.2977 44.6609 65.7526 44.5725L65.6315 46.5805L65.6314 46.5524ZM74.7067 47.5598C76.2101 47.8025 77.7135 48.0734 79.203 48.3863L79.591 46.4212C78.0734 46.1082 76.5278 45.8232 74.9963 45.5803L74.6927 47.5738L74.7067 47.5598ZM83.6578 49.4235C85.1335 49.8066 86.5952 50.2319 88.057 50.6852L88.6418 48.7767C87.1659 48.3093 85.648 47.8839 84.1582 47.4867L83.6578 49.4235ZM92.3866 52.1574C93.8064 52.6808 95.2405 53.2464 96.6465 53.84L97.428 51.9883C95.9938 51.3665 94.5458 50.8149 93.0978 50.2633L92.4147 52.1574L92.3866 52.1574ZM100.795 55.7471C102.159 56.4108 103.509 57.1166 104.845 57.8645L105.809 56.1116C104.445 55.3636 103.067 54.6296 101.661 53.9517L100.795 55.7471Z" fill="#919191"></path><path d="M95.5845 61.1824L95.0597 59.2569L104.589 56.6842L101.292 47.336L103.186 46.681L107.205 58.0676L95.5845 61.1824Z" fill="#919191"></path><circle cx="8.69433" cy="59.7296" r="3.91825" transform="rotate(-135 8.69433 59.7296)" stroke="#919191" stroke-width="2"></circle></g><defs><clipPath id="clip0_625_20131"><rect width="76.2328" height="83.6102" fill="white" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 113.026 54.5132)"></rect></clipPath></defs></svg>
+                </div>
+            </div>
+            <div class="grid-step_item relet">
+                <div class="tf-box-icon">
+                    <img src="imagesDIR/other/fruit-pirates-1.svg" alt="">
+                </div>
+                <h2>2</h2>
+                <p>Ознайомтеся з правилами: У кожній грі є свій розділ з інструкціями та порадами. Приділіть хвилинку, щоб ознайомитися з ними, перш ніж почати грати.</p>
+                <div class="arrow">
+                    <svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_625_20131)"><path d="M13.0682 58.6163C14.3723 57.8473 15.7186 57.1206 17.0509 56.436L16.1333 54.65C14.7448 55.3625 13.3845 56.1032 12.0524 56.9002L13.0683 58.6444L13.0682 58.6163ZM21.1465 54.4527C22.5352 53.8244 23.9381 53.2383 25.3551 52.6944L24.6057 50.8245C23.1607 51.3965 21.7298 51.9825 20.313 52.6107L21.1324 54.4386L21.1465 54.4527ZM29.6344 51.1469C31.0797 50.6592 32.5251 50.2277 33.9986 49.8244L33.4458 47.8989C31.9582 48.3162 30.4707 48.7616 28.9974 49.2493L29.6344 51.1469ZM38.4195 48.6986C39.9073 48.3656 41.3952 48.0606 42.8972 47.7977L42.5408 45.8166C41.0107 46.0793 39.4948 46.3842 37.9649 46.7312L38.4195 48.6986ZM47.4036 47.1216C48.9199 46.929 50.4222 46.7786 51.9527 46.6563L51.7788 44.6615C50.2202 44.7838 48.6898 44.9342 47.1455 45.1267L47.4036 47.1216ZM56.5024 46.4156C58.019 46.3635 59.5498 46.3536 61.0666 46.3857L61.0753 44.3774C59.5164 44.3592 57.9715 44.3551 56.4128 44.4211L56.4884 46.4297L56.5024 46.4156ZM65.6314 46.5524C67.1485 46.6407 68.6656 46.7852 70.1829 46.9578L70.4022 44.9641C68.8569 44.7915 67.2977 44.6609 65.7526 44.5725L65.6315 46.5805L65.6314 46.5524ZM74.7067 47.5598C76.2101 47.8025 77.7135 48.0734 79.203 48.3863L79.591 46.4212C78.0734 46.1082 76.5278 45.8232 74.9963 45.5803L74.6927 47.5738L74.7067 47.5598ZM83.6578 49.4235C85.1335 49.8066 86.5952 50.2319 88.057 50.6852L88.6418 48.7767C87.1659 48.3093 85.648 47.8839 84.1582 47.4867L83.6578 49.4235ZM92.3866 52.1574C93.8064 52.6808 95.2405 53.2464 96.6465 53.84L97.428 51.9883C95.9938 51.3665 94.5458 50.8149 93.0978 50.2633L92.4147 52.1574L92.3866 52.1574ZM100.795 55.7471C102.159 56.4108 103.509 57.1166 104.845 57.8645L105.809 56.1116C104.445 55.3636 103.067 54.6296 101.661 53.9517L100.795 55.7471Z" fill="#919191"></path><path d="M95.5845 61.1824L95.0597 59.2569L104.589 56.6842L101.292 47.336L103.186 46.681L107.205 58.0676L95.5845 61.1824Z" fill="#919191"></path><circle cx="8.69433" cy="59.7296" r="3.91825" transform="rotate(-135 8.69433 59.7296)" stroke="#919191" stroke-width="2"></circle></g><defs><clipPath id="clip0_625_20131"><rect width="76.2328" height="83.6102" fill="white" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 113.026 54.5132)"></rect></clipPath></defs></svg>
+                </div>
+            </div>
+            <div class="grid-step_item relet">
+                <div class="tf-box-icon">
+                    <img src="imagesDIR/other/fruit-pirates-2.svg" alt="">
+                </div>
+                <h2>3</h2>
+                <p>Натисніть «відтворити»: Коли ви будете готові, просто натисніть кнопку «відтворити». Гра відкриється в новому вікні вашого браузера.</p>
+                <div class="arrow">
+                    <svg width="114" height="114" viewBox="0 0 114 114"><g clip-path="url(#clip0_625_20131)"><path d="M13.0682 58.6163C14.3723 57.8473 15.7186 57.1206 17.0509 56.436L16.1333 54.65C14.7448 55.3625 13.3845 56.1032 12.0524 56.9002L13.0683 58.6444L13.0682 58.6163ZM21.1465 54.4527C22.5352 53.8244 23.9381 53.2383 25.3551 52.6944L24.6057 50.8245C23.1607 51.3965 21.7298 51.9825 20.313 52.6107L21.1324 54.4386L21.1465 54.4527ZM29.6344 51.1469C31.0797 50.6592 32.5251 50.2277 33.9986 49.8244L33.4458 47.8989C31.9582 48.3162 30.4707 48.7616 28.9974 49.2493L29.6344 51.1469ZM38.4195 48.6986C39.9073 48.3656 41.3952 48.0606 42.8972 47.7977L42.5408 45.8166C41.0107 46.0793 39.4948 46.3842 37.9649 46.7312L38.4195 48.6986ZM47.4036 47.1216C48.9199 46.929 50.4222 46.7786 51.9527 46.6563L51.7788 44.6615C50.2202 44.7838 48.6898 44.9342 47.1455 45.1267L47.4036 47.1216ZM56.5024 46.4156C58.019 46.3635 59.5498 46.3536 61.0666 46.3857L61.0753 44.3774C59.5164 44.3592 57.9715 44.3551 56.4128 44.4211L56.4884 46.4297L56.5024 46.4156ZM65.6314 46.5524C67.1485 46.6407 68.6656 46.7852 70.1829 46.9578L70.4022 44.9641C68.8569 44.7915 67.2977 44.6609 65.7526 44.5725L65.6315 46.5805L65.6314 46.5524ZM74.7067 47.5598C76.2101 47.8025 77.7135 48.0734 79.203 48.3863L79.591 46.4212C78.0734 46.1082 76.5278 45.8232 74.9963 45.5803L74.6927 47.5738L74.7067 47.5598ZM83.6578 49.4235C85.1335 49.8066 86.5952 50.2319 88.057 50.6852L88.6418 48.7767C87.1659 48.3093 85.648 47.8839 84.1582 47.4867L83.6578 49.4235ZM92.3866 52.1574C93.8064 52.6808 95.2405 53.2464 96.6465 53.84L97.428 51.9883C95.9938 51.3665 94.5458 50.8149 93.0978 50.2633L92.4147 52.1574L92.3866 52.1574ZM100.795 55.7471C102.159 56.4108 103.509 57.1166 104.845 57.8645L105.809 56.1116C104.445 55.3636 103.067 54.6296 101.661 53.9517L100.795 55.7471Z" fill="#919191"></path><path d="M95.5845 61.1824L95.0597 59.2569L104.589 56.6842L101.292 47.336L103.186 46.681L107.205 58.0676L95.5845 61.1824Z" ></path><circle cx="8.69433" cy="59.7296" r="3.91825" transform="rotate(-135 8.69433 59.7296)"  stroke-width="2"></circle></g><defs><clipPath id="clip0_625_20131"><rect width="76.2328" height="83.6102" fill="white" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 113.026 54.5132)"></rect></clipPath></defs></svg>
+                </div>
+            </div>
+            <div class="grid-step_item relet">
+                <div class="tf-box-icon">
+                    <img src="imagesDIR/other/fruit-pirates-3.svg" alt="">
+                </div>
+                <h2>4</h2>
+                <p>Поділіться своїм досвідом: Використовуйте функцію коментарів під кожною грою, щоб поділитися своїми відгуками та прочитати думки інших гравців. Ваш відгук може допомогти іншим вибрати гру.</p>
+                
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+
+<section class="section-pad bg-lite bgImgHJ">
+    <div class="align-containers">
+         <div class="title-boxHJK">
+            <h2 class="titleHJK">Почніть грати сьогодні</h2>
+        </div> 
+       
+        <div class="grid-game">
+             
+            <div class="grid-game_item nfzx0Q7cK3">
+                <div class="product-main">
+                    <a class="product_link" href="abyssal-chronicles.html"></a>
+                    <div class="product_img">
+                        <img src="1.png" alt="Abyssal Chronicles" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Abyssal Chronicles</h3>
+                    <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-woman-0.jpg" alt="">
+                        </div>
+                        <h3 class="develop-name">Galactic Gamers</h3>
+                    </div>
+                    <p class="product_text">Это захватывающая онлайн игра, погружающая игроков в глубокий и мистический подводный мир. В этой игре, игроки исследуют бесконечные глубины моря, встречаясь с...</p>
+                    
+                </div>
+            </div>
+            
+             
+            <div class="grid-game_item">
+                <div class="product-main">
+                    <a class="product_link" href="skyward-legions.html"></a>
+                    <div class="product_img">
+                        <img src="2.png" alt="Skyward Legions" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Skyward Legions</h3>
+                    <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-man-0.jpg" alt="">
+                        </div>
+                        <h3 class="develop-name">Thunderbolt Games</h3>
+                    </div>
+                    <p class="product_text">"Skyward Legions" - это масштабная онлайн игра, где игроки погружаются в мир, парящий в облаках, населённый летающими островами и мифическими существами. В этой воздушной...</p>
+                </div>
+            </div>
+            
+             
+            <div class="grid-game_item">
+                <div class="product-main">
+                    <a class="product_link" href="neon-odyssey.html"></a>
+                    <div class="product_img">
+                        <img src="3.png" alt="Neon Odyssey" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Neon Odyssey</h3>
+                     <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-woman-1.jpg" alt="">
+                        </div>
+                        <h3 class="develop-name">Phoenix Pulse</h3>
+                    </div>
+                    <p class="product_text">"Neon Odyssey" - это динамичная онлайн игра, погружающая игроков в футуристический городской мир, наполненный неоновым светом и высокими технологиями. В этой...</p>
+                </div>
+            </div>
+            
+             
+            <div class="grid-game_item">
+                <div class="product-main">
+                    <a class="product_link" href="celestial-conquerors.html"></a>
+                    <div class="product_img">
+                        <img src="4.png" alt="Celestial Conquerors" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Celestial Conquerors</h3>
+                    <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-man-1.jpg " alt="">
+                        </div>
+                        <h3 class="develop-name">Zenith Pulse Games</h3>
+                    </div>
+                    <p class="product_text">"Celestial Conquerors" - это эпическая онлайн стратегическая игра, разворачивающаяся в огромной вселенной, где игроки берут на себя роль правителей звёздных империй,...</p>
+                </div>
+            </div>
+            
+             
+            <div class="grid-game_item">
+                <div class="product-main">
+                    <a class="product_link" href="eternal-frontiers.html"></a>
+                    <div class="product_img">
+                        <img src="5.png" alt="Eternal Frontiers" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Eternal Frontiers</h3>
+                    <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-man-2.jpg " alt="">
+                        </div>
+                        <h3 class="develop-name">Void Dream Studios</h3>
+                    </div>
+                    <p class="product_text">"Eternal Frontiers" - это захватывающая онлайн ролевая игра, установленная в фантастическом научно-фантастическом мире, где бесконечные галактики и таинственные планеты...</p>
+                </div>
+            </div>
+            
+             
+            <div class="grid-game_item">
+                <div class="product-main">
+                    <a class="product_link" href="mystic-vanguard-zoom.html"></a>
+                    <div class="product_img">
+                        <img src="6.png" alt="Mystic Vanguard Zoom" />  
+                    </div>
+                    <div class="product_item-line"></div>
+                    <h3 class="product_title">Mystic Vanguard Zoom</h3>
+                    <div class="develop">
+                        <div class="develop_avatar">
+                            <img src="imagesDIR/ava/avatar-man-3.jpg" alt="">
+                        </div>
+                        <h3 class="develop-name">Solar Pulse Developers</h3>
+                    </div>
+                    <p class="product_text">"Mystic Vanguard" - это онлайн ролевая игра, сочетающая элементы магии и фэнтези, где игроки погружаются в мир, полный древних тайн и мистических сил. В этой игре, игроки...</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+ 
+ <section class="bg-accent">
+    <div class="skew-sectionOp bg-dark">
+        <div class="align-containers">
+           <div class="pad-top50">
+            <div class="title-boxHJK">
+                <h2 class="titleHJK">Ваш портал в світ ігор - підписуйтесь і досліджуйте!</h2>
+            </div>
+            <div class="form-maineWrapper">
+                <form class="form-flexPR form-wrapperPR" method="post" action="subscribe.html"> 
+                     <label for="c19182800-name">Введіть своє ім'я</label><input class="input-c19182800" id="c19182800-name" type="text" required> <label for="c19182800-email">Адреса електронної пошти</label><input class="input-c19182800" id="c19182800-email" type="email" required>                       
+                    <div class="form-flexPR">
+                        <div class="form-wrapperPR-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required/>
+                            <label class="form-check-label" for="flexCheckDefault" required>
+                                Я приймаю <a href="privacy.html">Політика конфіденційності</a>
+                            </label>
+                        </div>
+                        <button class="buttunGame-4 btn-w" type="submit" >
+                            <span> Надішліть повідомлення</span>
+                        </button>      
+                    </div>
+                </form>
+            </div>
+           </div>            
+        </div>
+    </div>
+ </section>
+ 
+ 
+ <footer class="bg-dark">
+    <div class="top-footerKL 3R14S1PZ">
+        <div class="align-containers">
+            <div class="flex-wrapper row-reverse gap30">
+                <div class="flex1">
+                    <a href="./" class="top-logo">
+                        <img src="imagesDIR/logo.png " alt="" />
+                        <span> Pirate Fitness Bootcamp</span>
+                    </a>
+                    <div class="flex-wrapper footer-box_flex">
+                         <p>Почніть вигравати вже сьогодні</p>
+                             
+                            <div class="top-footerKL_img">
+                                <img src="imagesDIR/img-18.svg" alt=""> 
+                            </div> 
+                         
+                    </div>                 
+
+                </div>
+                 <div class="flex2">
+                    <div class="footer-disclaimer">
+                            <h2>Застереження</h2>
+                            <p>Вивчіть різноманіття онлайн ігор на нашому сайті, доступних виключно для повнолітніх користувачів старше 18 років. Наша платформа пропонує все: від головоломок до екшенів, однак слід пам'ятати, що успіх у цих іграх не дорівнює виграшу в реальних азартних іграх. Насолоджуйтесь безпечною та веселою грою. </p>
+                    </div>
+                 </div>
+                  <div class="flex1">
+                    <ul class="top-menu_list">
+                        <li>
+                          <a class="top-menu_link" href="communityrules.html">Правила взаємодії</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="privacy.html"> Політика конфіденційності</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="term.html"> Правила та умови</a>
+                        </li>
+                        <li>
+                            <a class="top-menu_link" href="disclaimer.html">Застереження</a>
+                        </li>
+                        
+                        <li>
+                            <a class="top-menu_link" href="responsible-gaming.html">Відповідальна соціальна гра</a>
+                        </li>
+                          
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-footerKL ">
+         <div class="align-containers">
+            <div class="bottom-footerKL_copyright">	
+                <span>Copyright</span>
+                <span>&#169;</span>
+                <span>2024</span>
+                <span>Pirate Fitness Bootcamp</span>                 
+            </div>
+         </div>
+    </div>
+ </footer>
+
+<script>
+const toggleNavBtn = document.querySelector('.hamburger-menu');
+const navigationMenu = document.querySelector('.top-navLKI');
+const pageOverlay = document.querySelector('.overlay');
+const mobileNavMenu = document.querySelector('.top-menu');
+const closeMobileMenuBtn = document.querySelector('.top-menu_butonClose');
+
+toggleNavBtn.addEventListener('click', () => {
+    navigationMenu.classList.toggle('active');   
+    pageOverlay.classList.toggle('active');
+});
+
+pageOverlay.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+closeMobileMenuBtn.addEventListener('click', () => {
+    navigationMenu.classList.remove('active');
+    pageOverlay.classList.remove('active');
+});
+
+</script>
+
+<script>  
+const gridItems = document.querySelectorAll('.grid-item');
+const servicesImages = document.querySelectorAll('.services__images-item');
+let autoSwitchInterval;
+let currentIndex = 0;
+const switchIntervalTime = 3000; 
+
+
+function activateImage(index) {
+    servicesImages.forEach((image, idx) => {
+        image.classList.remove('active');
+        if (idx === index) {
+            image.classList.add('active');
+        }
+    });
+}
+
+
+function startAutoSwitch() {
+    autoSwitchInterval = setInterval(() => {
+        currentIndex = (currentIndex + 1) % servicesImages.length; 
+        activateImage(currentIndex);
+    }, switchIntervalTime);
+}
+
+
+function stopAutoSwitch() {
+    clearInterval(autoSwitchInterval);
+}
+
+
+function checkWindowSize() {
+    stopAutoSwitch(); 
+
+    if (window.innerWidth <= 992) {
+        startAutoSwitch();
+        gridItems.forEach(item => {
+            item.removeEventListener('mouseover', handleMouseOver);
+        });
+    } else {
+        gridItems.forEach((item, index) => {
+            item.addEventListener('mouseover', () => activateImage(index));
+        });
+    }
+}
+
+
+function handleMouseOver(event) {
+    const index = Array.from(gridItems).indexOf(event.currentTarget);
+    activateImage(index);
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    activateImage(0); 
+    checkWindowSize(); 
+});
+
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(checkWindowSize, 150); 
+});
+
+
+</script>
+
+ 
+    </body>
+    
+</html>
+

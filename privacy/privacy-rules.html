@@ -1,0 +1,211 @@
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./theme-dir/js/jquery.file.min.js?13"></script>
+        <title>{title}</title>
+        <meta property="og:title" content="{title}" />
+        <meta property="og:image" content="{images}"/>
+        
+        <meta property="og:description" content="{title}">
+        <meta name="description" content="{title}">
+        <link rel="stylesheet" href="./theme-dir/css/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="./theme-dir/css/icons.css">
+        <script src="./theme-dir/js/jquery.cookie.file.js?13"></script>
+        
+
+        <link rel="shortcut icon" href="./logotip.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./style.css?1681371641">
+        <link rel="stylesheet" href="./theme-dir/css/media-style.css">
+        <script type="text/javascript" src="./theme-dir/js/date.js"></script>
+        
+        </head>
+
+        <body>
+            <section class="header-layout">
+                <div class="color-theme"></div>
+                <div class="content-block paddClass">
+                    <div class="nav">
+                        <input type="checkbox" id="nav-check">
+                        <a href="./" class="nals"><div class="nav-title">
+                            <img src="logotip.svg" alt="">
+                            Car Amethyst
+                        </div></a>
+                        <div class="nav-btn">
+                            <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            </label>
+                        </div>
+
+                        <div class="nav-links">
+                            <a href="//github.io/jo_geek" target="_blank">Github</a>
+                            <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
+                            <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
+                            <a href="https://codepen.io/jo_Geek/" target="_blank">Article</a>
+                            <a href="contact.html" target="_blank">Contact us</a>
+                        </div>
+                    </div>
+
+                    <div class="content-block__text">
+                        <div class="block__text--left">
+                            <form action="thanks_en.html" class="hdForm">
+                                <h2>Write to us</h2>
+                                <input class="input" name="name" placeholder="Enter your name" type="text" required>
+                                <input class="input" name="tel" placeholder="Enter you phone" type="tel" required>
+                                <input class="input" name="email" placeholder="Email address" type="email" required>
+
+                                <button type="submit" class="btn-1"><span>Make an appointment with a specialist</span></button>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        I accept <a href="privacy/privacy-rules.html">Privacy policy</a>
+                                    </label>
+                                </div>
+                                <img src="bg/0_vectimg.svg" alt="" class="hdImages">
+                            </form>
+                        </div>
+                        <div class="block__text--right">
+                            <h2>How good it is that you stopped by! You can always use our services. We are sure that you will be satisfied.</h2>
+                            <div class="text--right__statistic">
+                                <div class="statistic--item">
+                                    <i class="bi bi-check2-circle frStyle"></i>
+                                    <i class="bi bi-check2-square dnStyle"></i>
+                                    <p>Professional Agents</p>
+                                    <span>43364</span>
+                                </div>
+                                <div class="statistic--item">
+                                    <i class="bi bi-check2-circle frStyle"></i>
+                                    <i class="bi bi-check2-square dnStyle"></i>
+                                    <p>Successfully completed projects</p>
+                                    <span>14662</span>
+                                </div>
+                                <div class="statistic--item">
+                                    <i class="bi bi-check2-circle frStyle"></i>
+                                    <i class="bi bi-check2-square dnStyle"></i>
+                                    <p>Applications accepted</p>
+                                    <span>10182</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+
+<div style="padding: {rand_padding_vertical_great_v2} {rand_padding_vertical_small_4};">
+    {privacy}
+</div>
+
+
+
+
+
+
+
+        <!-- <div id="cookie-medw">
+            <p>We use cookies to improve the site and its interaction with users. By continuing to use the site, you consent to the use of cookies. You can always disable cookies in your browser settings.</p>
+            <button class="button-3 cookie_accept" style="margin: 0;">Accept</button>
+        </div> -->
+
+        <!-- <script type="text/javascript">
+
+            function checkCookiesMss(){
+                let cookieDate = localStorage.getItem('cookie-medw--cookieDate');
+                let cookieNotification = document.getElementById('cookie-medw');
+                let cookieBtn = cookieNotification.querySelector('.cookie_accept');
+
+                if( !cookieDate || (+cookieDate + 31536000000) < Date.now() ){
+                    cookieNotification.classList.add('show');
+                }
+
+                cookieBtn.addEventListener('click', function(){
+                    localStorage.setItem( 'cookie-medw--cookieDate', Date.now() );
+                    cookieNotification.classList.remove('show');
+                })
+            }
+            checkCookiesMss();
+        </script> -->
+        <script>
+            function convertColor(color,opac){
+            color = color.replace('#','');
+            r = parseInt(color.substring(0,2), 16);
+            g = parseInt(color.substring(2,4), 16);
+            b = parseInt(color.substring(4,6), 16);
+
+            result = 'rgba('+r+','+g+','+b+','+opac/100+')';
+            return result;
+            }
+
+            $('.color-theme').css('background-color', convertColor('#1A1A2E',60));
+            $('.videobox--bg').css('background-color', convertColor('#1A1A2E',60));
+            $('.comments-layout').css('background-color', convertColor('#1b1717',05));
+
+            if($('.dnStyle').css('display') != 'none'){
+                $('.frStyle').hide();
+            }
+            if($('.hdForm').length < 1){
+                $('.hdImages').show();
+            }
+            if($('.aboutUs-layout--main').css('flex-direction') == 'column' || $('.aboutUs-layout--main').css('flex-direction') == 'column-reverse'){
+                $('.flexBlock').css({'max-width':'732px','width':'100%','margin':'0 auto'});
+            }
+
+            if($('.content-block__top').css('flex-direction') == 'column' || $('.content-block__top').css('flex-direction') == 'column-reverse'){
+                $('.content-block__top').css({'max-width':'732px','width':'100%','margin':'0 auto'});
+                $('.content-block__bottom').css({'max-width':'732px','width':'100%','margin':'0 auto'});
+                $('.content-block__top h1').css({'width':'100%','text-align':'center'});
+                $('.content-block__top h1').addClass('mar');
+            }
+
+            if($('.service-main__item:first-child').css('flex-direction') == 'row'){
+                $('.service-main__item:nth-child(even)').css('flex-direction','row-reverse');
+            }else{
+                $('.service-main__item:nth-child(even)').css('flex-direction','row');
+            }
+
+
+
+            let images = $('.glo-img');
+            let otherImages = $('.otherPic');
+
+            function optomizetPicture(images){
+                let iGloH = images.prop('naturalHeight');
+                let GloW = images.prop('naturalWidth');
+
+                if(iGloH > GloW){
+                    if(iGloH > 800){
+                        images.css('width','30%');
+                    }
+                }
+            }
+            function optomizetPictureV2(images){
+                let iGloH = images.prop('naturalHeight');
+                let GloW = images.prop('naturalWidth');
+
+                if(iGloH < GloW){
+
+                    if(GloW > 500){
+                        images.css('height','auto');
+                    }
+                }
+            }
+
+            optomizetPicture(images);
+            otherImages.each(function() {
+                optomizetPictureV2($(this));
+            });
+
+
+            if($('.hdForm').length > 0){
+                $('.hdImages').hide();
+            }
+
+        </script>
+        
+
+</body>
+</html>
